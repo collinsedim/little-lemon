@@ -1,17 +1,21 @@
 import React from "react";
 import "./App.css";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 // import Header from "./components/Header"
 import Main from "./components/Main";
 import Footer from "./components/Footer";
-import Specials from "./components/Specials";
+import Specials from "./components/Specials/Specials";
+import Testimonials from "./components/Testimonials/Testimonials";
+import About from "./components/About/About";
 
 function App() {
   return (
     <>
-      <Nav />
+      <Header />
       <Main />
       <Specials />
+      <Testimonials />
+      <About />
       <Footer />
     </>
   );

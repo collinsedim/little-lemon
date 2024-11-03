@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
   font-family: "Markazi Text", serif;
@@ -39,7 +43,7 @@
   }
 }
 
-nav {
+/* nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -50,30 +54,26 @@ nav {
   z-index: 999;
   background-color: white;
   padding: 20px 10px;
-}
+} */
 
-nav img {
-  width: 200px;
-}
-
-nav ul li {
+/* nav ul li {
   display: inline-block;
   padding: 1em;
-}
+} */
 
-header {
+.hero {
   padding-top: 150px;
   background-color: #495e57;
 }
 
-header section {
+.hero-container {
   width: 80%;
   margin-left: 10%;
   padding-bottom: 50px;
   color: #edefee;
 }
 
-.header-img {
+.hero-img {
   width: 320px;
 }
 
@@ -118,11 +118,6 @@ button:hover {
   opacity: 0.8;
 }
 
-header img {
-  height: 400px;
-  border-radius: 12pt;
-}
-
 #booking input,
 #booking select {
   padding: 10px;
@@ -154,7 +149,6 @@ form {
 }
 
 @media (max-width: 700px) {
-  header section,
   footer section {
     display: grid;
     grid-auto-flow: row;
@@ -166,9 +160,14 @@ form {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     display: grid;
   }
-  header section {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    justify-items: center;
-  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 4px;
+  background-color: white;
+  padding: 2px 5px;
+  font-weight: 600;
+  border-radius: 16px;
 }

@@ -1,0 +1,93 @@
+/* Container styling */
+.specials-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.specials-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.menu-button {
+  margin-bottom: 20px;
+  padding: 6px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background: #333;
+  color: #fff;
+  background-color: #f4ce14;
+}
+
+/* Grid layout for specials */
+.specials-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.special-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Placeholder for image */
+.image-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.special-content h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.price {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 1rem;
+  /* margin-top: 5px; */
+}
+
+.description {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.order-button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .specials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .specials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

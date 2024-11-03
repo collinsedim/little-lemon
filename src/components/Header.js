@@ -1,28 +1,54 @@
-import React from "react";
-import food1 from "../images/restauranfood.jpg";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import littlelemon_logo from "../images/littlelemon_logo.png";
+import menuIcon from "../images/menu.svg";
 
-const Header = () => {
+const menuItems = [
+  "Home",
+  "About",
+  "Menu",
+  "Reservations",
+  "Order Online",
+  "Login",
+];
+
+const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <header>
-      <section>
-        <div>
-          <h2>Little Lemon</h2>
-          <h3>Chicago</h3>
-          <p>
-            We are a family owned Mediterraneran restaurant, focused on
-            traditional recipes servred with a modern twist.
-          </p>
-          <Link to="/Booking">
-            <button aria-label="On Click">Reserve Table</button>
-          </Link>
-        </div>
-        <div>
-          <img src={food1} className="header-img" />
-        </div>
-      </section>
+    <header className="fixed top-0 w-full h-16 bg-white z-10 flex items-center">
+      <nav className="flex justify-between items-center p-5 w-full max-w-7xl">
+        <a href="/">
+          <img
+            src={littlelemon_logo}
+            alt="Little Lemon Logo"
+            className="w-48 h-auto"
+          />
+        </a>
+        <ul className="md:flex items-center gap-4 hidden">
+          {menuItems.map((item) => (
+            <li key={item}>
+              <a href="/">{item}</a>
+            </li>
+          ))}
+        </ul>
+
+        <img
+          src={menuIcon}
+          alt="Menu Icon"
+          className="md:hidden cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
+        />
+        {isOpen && (
+          <ul className="md:hidden flex flex-col items-center gap-4 absolute top-16 right-5 bg-white p-5 w-72 text-xl rounded-2xl shadow-md">
+            {menuItems.map((item) => (
+              <li key={item}>
+                <a href="/">{item}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </nav>
     </header>
   );
 };
 
-export default Header;
+export default Nav;
