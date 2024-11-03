@@ -68,10 +68,12 @@ const BookingForm = (props) => {
           data-testid="booking-form"
           className="border border-white p-5 rounded-2xl"
         >
-          <h1>Reserve a Table</h1>
+          <h1 className="text-white">Reserve a Table</h1>
           <fieldset className="flex flex-col gap-5">
             <div>
-              <label htmlFor="book-date">Choose Date</label>
+              <label className="text-white" htmlFor="book-date">
+                Choose Date
+              </label>
               <input
                 id="book-date"
                 value={date}
@@ -82,7 +84,9 @@ const BookingForm = (props) => {
               {errors.date && <span className="error">{errors.date}</span>}
             </div>
             <div>
-              <label htmlFor="book-time">Choose Time</label>
+              <label className="text-white" htmlFor="book-time">
+                Choose Time
+              </label>
               <select
                 id="book-time"
                 value={times}
@@ -97,7 +101,9 @@ const BookingForm = (props) => {
               {errors.time && <span className="error">{errors.time}</span>}
             </div>
             <div>
-              <label htmlFor="book-guests">Number of Guests</label>
+              <label className="text-white" htmlFor="book-guests">
+                Number of Guests
+              </label>
               <input
                 id="book-guests"
                 min="1"
@@ -111,7 +117,9 @@ const BookingForm = (props) => {
               {errors.guests && <span className="error">{errors.guests}</span>}
             </div>
             <div>
-              <label htmlFor="book-occasion">Occasion</label>
+              <label className="text-white" htmlFor="book-occasion">
+                Occasion
+              </label>
               <select
                 id="book-occasion"
                 key={occasion}
